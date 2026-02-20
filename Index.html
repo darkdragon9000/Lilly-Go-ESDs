@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Display Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Price Display Manager</h1>
+        <p class="subtitle">Update prices for your store displays</p>
+        
+        <div id="displays-grid" class="displays-grid">
+            <!-- Display cards will be loaded here -->
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Edit Display</h2>
+            <form id="edit-form">
+                <input type="hidden" id="edit-id">
+                
+                <label for="edit-name">Item Name</label>
+                <input type="text" id="edit-name" required>
+                
+                <label for="edit-price">Price ($)</label>
+                <input type="number" id="edit-price" step="0.01" min="0" required>
+                
+                <div class="button-group">
+                    <button type="button" class="btn-cancel" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn-save">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
